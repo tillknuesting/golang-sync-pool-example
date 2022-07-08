@@ -12,5 +12,8 @@ The intended purpose of the pool is to cache allocated but unused objects for la
 
 The appropriate use of a pool is to manage a group of temporary items that are implicitly shared and possibly reused by concurrent independent clients of a package. Pool provides a way to spread the cost of allocation overhead across many clients.
 
-It is important to note that Pool also introduces performance costs. Using sync.Pool is significantly slower than simply initialising it. In addition, a pool shall not be copied after the first use."
+It is important to note that Pool also introduces performance costs. Using sync.Pool is significantly slower than simply initialising it. In addition, a pool shall not be copied after the first use.
+
+The sync.Pool, as you notice, is purely a temporary object pool, suitable for storing some temporary objects that are shared by different goroutines.
+"
 
